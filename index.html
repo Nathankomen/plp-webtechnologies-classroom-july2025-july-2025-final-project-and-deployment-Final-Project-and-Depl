@@ -4,48 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rental Management System</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo"><img src="images/logo.png" alt="RentalSys Logo"></div>
     <nav id="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="properties.html">Properties</a></li>
-        <li><a href="tenants.html">Tenants</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#tenants">Tenants</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <button id="toggle-menu">☰</button>
   </header>
+  <!-- Sections -->
   <main>
-    <section class="hero">
+    <!-- Home Section -->
+    <section id="home" class="hero">
       <img src="images/hero-banner.jpg" alt="Rental properties overview" class="hero-img">
       <div class="hero-text">
         <h1>Welcome to Rental Management System</h1>
         <p>Find the best properties and manage rentals easily.</p>
       </div>
     </section>
-    <section class="features">
-      <div class="feature">
-        <h2>Manage Properties</h2>
-        <p>Easily add, update, and manage rental properties.</p>
-      </div>
-      <div class="feature">
-        <h2>Tenant Services</h2>
-        <p>Keep track of tenants and payments efficiently.</p>
-      </div>
-      <div class="feature">
-        <h2>24/7 Support</h2>
-        <p>Contact us anytime for help with your rentals.</p>
+    <!-- Properties Section -->
+    <section id="properties">
+      <h2>Available Properties</h2>
+      <div class="property-gallery">
+        <div class="property-card">
+          <img src="images/property1.jpg" alt="2-bedroom apartment">
+          <h3>2-Bedroom Apartment</h3>
+          <p>$1200/month</p>
+        </div>
+        <div class="property-card">
+          <img src="images/property2.jpg" alt="3-bedroom house">
+          <h3>3-Bedroom House</h3>
+          <p>$2000/month</p>
+        </div>
+        <div class="property-card">
+          <img src="images/property3.jpg" alt="Studio apartment">
+          <h3>Studio Apartment</h3>
+          <p>$800/month</p>
+        </div>
       </div>
     </section>
+    <!-- Tenants Section -->
+    <section id="tenants">
+      <h2>Tenant Information</h2>
+      <p>Access your rental agreements, payment history, and support services here.</p>
+      <ul>
+        <li>View your lease details</li>
+        <li>Check payment history</li>
+        <li>Submit maintenance requests</li>
+      </ul>
+    </section>
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Property management</li>
+        <li>Tenant support</li>
+        <li>Maintenance and repairs</li>
+        <li>24/7 emergency support</li>
+      </ul>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
   </main>
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Rental Management System</p>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
