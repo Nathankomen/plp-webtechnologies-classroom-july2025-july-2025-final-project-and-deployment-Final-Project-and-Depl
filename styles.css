@@ -1,22 +1,40 @@
+/* ================== GENERAL ================== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3 {
+  margin: 0 0 10px 0;
+}
+/* ================== HEADER ================== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background-color: #333;
+  padding: 15px 40px;
+  background-color: #2c3e50;
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 header .logo img {
-  height: 40px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1abc9c;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 nav ul {
   display: flex;
@@ -25,101 +43,202 @@ nav ul {
   padding: 0;
 }
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  padding: 0 15px;
+  color: #fff;
+  padding: 0 20px;
+  font-weight: 500;
+  transition: color 0.3s;
 }
-
+nav ul li a:hover {
+  color: #1abc9c;
+}
 #toggle-menu {
   display: none;
-  font-size: 1.5em;
+  font-size: 1.8em;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
 }
+/* ================== HERO / HOME ================== */
 .hero {
   position: relative;
   text-align: center;
   color: white;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .hero-img {
   width: 100%;
-  max-height: 400px;
+  height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(0.6);
 }
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
+  max-width: 800px;
+  text-align: center;
 }
-/* Sections */
+.hero-text h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 1.3em;
+}
+/* ================== SECTIONS ================== */
 section {
-  padding: 50px 20px;
+  padding: 70px 20px;
 }
 h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  font-size: 2.2em;
+  color: #2c3e50;
+  position: relative;
 }
-/* Gallery */
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #1abc9c;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+/* ================== PROPERTIES ================== */
 .property-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 }
 .property-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   width: 300px;
-  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.2);
 }
 .property-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-/* Forms */
+.property-card h3 {
+  margin: 15px 0 5px 0;
+  padding: 0 15px;
+}
+.property-card p {
+  padding: 0 15px 15px 15px;
+  color: #1abc9c;
+  font-weight: bold;
+}
+/* ================== TENANTS ================== */
+#tenants ul {
+  list-style: disc;
+  padding-left: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+#tenants li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+/* ================== SERVICES ================== */
+#services ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#services li {
+  background-color: #1abc9c;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+#services li:hover {
+  transform: translateY(-5px);
+}
+/* ================== CONTACT ================== */
 form {
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 form input, form textarea, form button {
   margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
 }
 form button {
-  background-color: #333;
+  background-color: #1abc9c;
   color: white;
   border: none;
+  font-size: 1.1em;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-/* Footer */
+form button:hover {
+  background-color: #16a085;
+}
+/* ================== FOOTER ================== */
 footer {
   text-align: center;
-  padding: 15px;
-  background-color: #333;
+  padding: 20px;
+  background-color: #2c3e50;
   color: white;
 }
-/* Mobile responsivenes*/
+/* ================== MOBILE ================== */
 @media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: #444;
+    background-color: #34495e;
     position: absolute;
-    top: 60px;
+    top: 65px;
     right: 0;
-    width: 200px;
+    width: 220px;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
   }
   nav ul.show {
     display: flex;
   }
+  nav ul li a {
+    padding: 10px 20px;
+  }
   #toggle-menu {
     display: block;
+  }
+  #services ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-text h1 {
+    font-size: 2em;
+  }
+  .hero-text p {
+    font-size: 1.1em;
   }
 }
