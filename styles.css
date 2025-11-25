@@ -78,12 +78,11 @@ nav ul li a:hover {
   top: 0;
   left: 0;
   z-index: -1;
-  filter: brightness(0.6);
+  filter: brightness(0.9);
 }
 .hero-text {
   max-width: 800px;
   text-align: center;
-  color:black;
 }
 .hero-text h1 {
   font-size: 3em;
