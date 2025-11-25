@@ -63,7 +63,7 @@ nav ul li a:hover {
 .hero {
   position: relative;
   text-align: center;
-  color: brown;
+  color: white;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -83,6 +83,7 @@ nav ul li a:hover {
 .hero-text {
   max-width: 800px;
   text-align: center;
+  color:black;
 }
 .hero-text h1 {
   font-size: 3em;
